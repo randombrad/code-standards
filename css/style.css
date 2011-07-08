@@ -395,18 +395,18 @@ header #social #linkback:hover { color: #dcdcdc; }
 }
 
 .intro { 
-	min-height: 120px; 
+	min-height: 70px; 
 	border-bottom: 1px #dcdcdc solid;
 	margin-bottom: 20px;	
 }
 
 .intro .icon {
-	border-radius: 100px; 
-	-moz-border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-o-border-radius: 100px;
-	height: 100px;
-	width: 100px;
+	border-radius: 50px; 
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-o-border-radius: 50px;
+	height: 50px;
+	width: 50px;
 	background: #f30;
 	float: left;
 	display: inline;
@@ -414,7 +414,7 @@ header #social #linkback:hover { color: #dcdcdc; }
 }
 
 div.intro h1, div.intro h2,
-div.intro p, div.intro ol  { margin-left: 120px; }
+div.intro p, div.intro ol  { margin-left: 70px; }
 
 div.intro ol, div.intro ul  { list-style-position: inside; }
 
@@ -499,8 +499,8 @@ h1 {
 	font-size: 34px;	
 	font-weight: 700;
 	font-family: Calibri, AlexandriaBold, Arial, Helvetica, sans-serif;
-	line-height: 1.1em;
-	margin-bottom: 14px;
+	line-height: 1.4em;
+	margin-bottom: 20px;
 }
 
 h2 {
