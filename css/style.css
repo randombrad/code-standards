@@ -303,7 +303,6 @@ header h1 a {
 }
 
 header #social {
-    background: rgba(144, 142, 145, 0.9);
     float: right;
     margin-bottom: 0;
     padding: 7px;
@@ -648,12 +647,12 @@ a[href^="https://wiki"], a[href^="http://repo"], a[href^="https://fusion"] { bac
 	line-height: 27px;
 	border-bottom: 1px solid gainsboro;
 /*  border-top: 50px solid rgba(64, 64, 64, .9); */
-	border-top: 10px solid #EEF4F9;
+	border-top: 8px solid #EEF4F9;
 	font-family: 'Calibri','AlexandriaBold';
 	font-size: 30px;
 	padding: 15px 0 6px 20px;
 	position: fixed;
-	top: 31px; /* -20px; */
+	top: 32px; /* -20px; */
 	width: 300px;
 	z-index: 0;
 }
