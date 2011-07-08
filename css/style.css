@@ -263,7 +263,6 @@ header {
 	height: 60px;
 	width: 100%;
 	position: relative;
-	border-bottom: 3px solid #eee;
 }
 
 header a { 
@@ -471,9 +470,9 @@ p, ol, ul {
 
 abbr { border-bottom: 1px dotted; }
 
-a { color: #f30; /* #09f */ }
+a { color: #1D6799; /* #09f */ }
 
-a:hover { color: #333; }
+a:hover { color: #DD5F13; }
 
 p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     margin-bottom: 10px;
@@ -642,14 +641,19 @@ a[href^="https://wiki"], a[href^="http://repo"], a[href^="https://fusion"] { bac
 ----------------------------------------------------------------------------------------------------*/
 
 #side .toc-title {
+	color: #1D6799;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: -0.05em;
+	line-height: 27px;
 	border-bottom: 1px solid gainsboro;
 /*  border-top: 50px solid rgba(64, 64, 64, .9); */
-	border-top: 10px solid #dd5f13;
+	border-top: 10px solid #EEF4F9;
 	font-family: 'Calibri','AlexandriaBold';
 	font-size: 30px;
 	padding: 15px 0 6px 20px;
 	position: fixed;
-	top: 30px; /* -20px; */
+	top: 31px; /* -20px; */
 	width: 300px;
 	z-index: 0;
 }
