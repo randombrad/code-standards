@@ -1,18 +1,18 @@
 <?php
 $page_title = "Front-end Code Standards &amp; Best Practices";
-$page_keywords = "Isobar code standards, coding standards, frontend development, frontend best practices, html code standards, html5 code standards, css code standards, best code practices, development, frontend development";
-$page_description = "Isobar North America's Coding Standards and Frontend development Best Practices";
+$page_keywords = "css code standards, best code practices, development, frontend development";
+$page_description = "";
 $protocol = (strstr('https',$_SERVER['SERVER_PROTOCOL']) === false)?'http':'https'; 
 $page_root = $protocol.'://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['REQUEST_URI']);
 include_once('layout/header.php');
 ?>
 
 	<body>
-		<a class="fork" href="https://github.com/isobar-idev/code-standards/" target="_blank"></a>
+		<a class="fork" href="https://github.com/randombrad/code-standards/" target="_blank"></a>
 		<div id="container">
 		
 			<header role="banner">
-				<h1><a id="logo" href="<?php echo $page_root; ?>">Isobar US</a></h1>
+				<h1><a id="logo" href="<?php echo $page_root; ?>">Liferay</a></h1>
 				
 				<canvas id="canvas-logo" width="500" height="300">
 					<strong>Your browser cannot handle the awesomeness of this!</strong>
@@ -22,7 +22,7 @@ include_once('layout/header.php');
 					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=5&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://na.isobar.com/standards/&source=Shareaholic" id="facebook"></a></li>
 					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=7&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://na.isobar.com/standards/&source=Shareaholic" id="twitter"></a></li>
 					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=2&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://na.isobar.com/standards/&source=Shareaholic" id="delicious"></a></li>
-					<li><a href="http://na.isobar.com" id="linkback">Return to Isobar NA</a></li>
+					<li><a href="http://liferay.com" id="linkback">Return to Liferay</a></li>
 				</ul>
 			</header>
 
@@ -31,16 +31,17 @@ include_once('layout/header.php');
 				<h1>Front-end Code Standards &amp; Best Practices</h1>
 			
 				<?php
-				include_once('sections/general.html');
-				include_once('sections/markup.html');
-				include_once('sections/css.html');
-				include_once('sections/javascript.html');
-				include_once('sections/performance.html');
-				include_once('sections/browsers.html');
-				include_once('sections/seo.html');
-				include_once('sections/codeReviews.html');
-				include_once('sections/appendices.html');
-				include_once('sections/revisionHistory.html');
+				//include_once('sections/general.html');
+				include_once('sections/liferay.html');
+				//include_once('sections/markup.html');
+				//include_once('sections/css.html');
+				//include_once('sections/javascript.html');
+				//include_once('sections/performance.html');
+				//include_once('sections/browsers.html');
+				//include_once('sections/seo.html');
+				//include_once('sections/codeReviews.html');
+				//include_once('sections/appendices.html');
+				//include_once('sections/revisionHistory.html');
 				?>
 
 			</div><!--! End of #main section !-->
@@ -55,8 +56,7 @@ include_once('layout/header.php');
 
 		<footer role="contentinfo">
 			<p>
-				<span class="float_left"><?php print date("Y"); ?> Isobar North America, Inc. All rights reserved.</span>
-				<span class="float_right">All content licensed under Creative Commons Attribution 3.0 Unported License</span>
+				<span class="float_left"><?php print date("Y"); ?> Liferay, Inc. All rights reserved.</span>
 			</p>
 		</footer>
 

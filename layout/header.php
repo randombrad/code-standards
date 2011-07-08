@@ -24,7 +24,7 @@
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title><?php echo $page_title; ?> | Isobar North America</title>
+		<title><?php echo $page_title; ?> | Liferay</title>
         <meta name="description" content="<?php echo $page_description; ?>">
         <meta name="author" content="Isobar North America">
         

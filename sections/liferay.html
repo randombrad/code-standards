@@ -1,0 +1,1095 @@
+<!-- #### GENERAL SECTION #### -->
+
+
+<h2>Overview</h2>
+
+<p>This document contains guidelines for web applications built by the Creative Technology (front end engineering) practice of Isobar US. It is to be readily available to anyone who wishes to check the iterative progress of our best practices. If you have any feedback, please leave a comment on the <a href="http://na.isobar.com/2010/our-front-end-development-best-practices/#comments">announcement blog post</a>.</p>
+
+<p>This document's primary motivation is two- fold: <tt>1)</tt> code consistency and <tt>2)</tt> best practices. By maintaining consistency in coding styles and conventions, we can ease the burden of legacy code maintenance, and mitigate risk of breakage in the future. By adhering to best practices, we ensure optimized page loading, performance and maintainable code.</p>
+
+
+<section id="liferay">
+
+	<div class="intro has-icon">
+		<img class="icon" src="img/layout/icon-curly.png" alt="{}" />
+		<h1>Liferay Website Guidelines</h1>
+	</div>
+	
+	<h2>Page Layouts and Columns</h2>
+	
+	<p>
+		The Liferay website uses the <a href="http://gridder.andreehansson.se/" rel="external">960 Grid System</a> for all pages on the site.
+		The 960 Grid System is an effort to streamline web development workflow by providing commonly used dimensions, based on a layout width of 960 pixels.
+	</p>
+	<p>
+		Each page layout is divided into 12 even portions.
+		Each portion is 60 pixels wide with 10 pixels of margin on the left and the right, with all 12 portions filling the available 960px width of the layout.
+	</p>
+	<div class="gs-960 gs-ex">
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+		<div class="col col-1-12"><div>60px</div></div>
+	</div>
+	<p>
+		Makes more sense when you see it, right?
+	</p>
+	<p>
+		The page layout 960px was chosen for its size and divisibility.
+		All modern monitors support at least 1024x768px of resolution, so 960px easily fits into this standard.
+		The number of 960 is also a highly flexible base number, as it is divisible by 2, 3, 4, 5, 6, 8, 10, 12, 15, 16, 20, 24, 30, 32, 40, 48, 60, 64, 80, 96, 120, 160, 192, 240, 320 and 480.
+	</p>
+	<div class="gs-960 gs-ex">
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+		<div class="col col-1-12"><div>60px<br>1/12</div></div>
+	</div>
+	<div class="gs-960 gs-ex">
+		<div class="col col-2-12"><div>140px<br>1/6</div></div>
+		<div class="col col-2-12"><div>140px<br>1/6</div></div>
+		<div class="col col-2-12"><div>140px<br>1/6</div></div>
+		<div class="col col-2-12"><div>140px<br>1/6</div></div>
+		<div class="col col-2-12"><div>140px<br>1/6</div></div>
+		<div class="col col-2-12"><div>140px<br>1/6</div></div>
+	</div>
+	<div class="gs-960 gs-ex">
+		<div class="col col-3-12"><div>220px<br>1/4</div></div>
+		<div class="col col-3-12"><div>220px<br>1/4</div></div>
+		<div class="col col-3-12"><div>220px<br>1/4</div></div>
+		<div class="col col-3-12"><div>220px<br>1/4</div></div>
+	</div>
+	<div class="gs-960 gs-ex">
+		<div class="col col-4-12"><div>300px<br>1/3</div></div>
+		<div class="col col-4-12"><div>300px<br>1/3</div></div>
+		<div class="col col-4-12"><div>300px<br>1/3</div></div>
+	</div>
+	<div class="gs-960 gs-ex">
+		<div class="col col-5-12"><div>380px<br>5/12</div></div>
+		<div class="col col-5-12"><div>380px<br>5/12</div></div>
+		<div class="col col-2-12"><div>140px<br>1/6</div></div>
+	</div>
+	<div class="gs-960 gs-ex">
+		<div class="col col-6-12"><div>460px<br>1/2</div></div>
+		<div class="col col-6-12"><div>460px<br>1/2</div></div>
+	</div>
+	<h2>Layout in Action</h2>
+	<p>
+		A typical Liferay page layout will have a left column reserved for navigation.
+		The left column will have a width of 220px, which is 1/4 the page layout.
+		The remaining right column will have a width of 700px, which is 3/4 the page layout.
+	</p>
+	<div class="gs-960 gs-ex">
+		<div class="col col-3-12"><div>220px<br>1/4</div></div>
+		<div class="col col-9-12"><div>700px<br>3/4</div></div>
+	</div>
+	<div class="gs-960 gs-ex">
+		<div class="col col-3-12"><img src="images/gs-ex_col_side-nav.png" style="display: block; " /></div>
+		<div class="col col-9-12"><img src="images/gs-ex_col_side-nav-remainder.png" style="display: block; " /></div>
+	</div>
+	
+	
+	<h2>Typography</h2>
+	
+	<p>
+		Strong typography forms the backbone of any brand identity; it is a major contributor to a brand's visual style and tone.
+		Fonts are chosen with three key considerations: their fit with brand values, readability and flexibility of use.
+		Limiting the number of fonts is key to maintaining a distinctive visual style and ease of brand management.
+	</p>
+	<p>
+		
+		The Liferay website chose one font; Helvetica! ... which really meant Arial for Windows, which meant yet another sans-serif for everbody else.
+		Whenever possible, the website uses Arial at 12px for all text on the site.
+	</p>
+	<h2>Headings</h2>
+	<p>
+		Headings are pretty simple - they are big versions of the regular text.
+		The website gives all <var>H1</var> elements a 2.5em font size with a 0.4em bottom margin, which equates to a 30px font size with a 12px bottom margin.
+		The website gives all <var>H2, H3</var> elements a 1.333em font size with a 0.375em bottom margin, which equates to a 16px font size with a 6px bottom margin.
+		The website gives all <var>H4, H5, H6</var> elements a 1.166em font size with a 0.428em bottom margin, which equates to a 14px font size with a 6px bottom margin.
+	</p>
+	<p>
+		Why didn't the Liferay website use straight-up pixels?  The website uses pixels, but headings need flexibility.
+		Word.
+	</p>
+	<h2>Measure</h2>
+	<p>
+		When a typographer refers to "the measure", they mean the width of the text body.
+		Simply put, when copy is too wide or poorly spaced it becomes difficult to read.
+	</p>
+	<p>
+		The general rule for a comfortable measure is around 60 - 70 characters per line.
+		Taking into account that each character averages out to around 0.5em in width, setting a measure of 33em should keep each line within the optimum range.
+		Since the Liferay website defaults to a 12px Arial font, we would desire a number close to 396px (33 * 12).
+		The closest and most ideal layout portions for the text body are therefore 5/12 (380px) and 1/2 (460px).
+	</p>
+	<div class="lrweb lines">
+		<div class="gs-960 gs-diet-ex">
+			<div class="col col-5-12">
+				<span style="font-size: 2.5em;">
+					Chapter 1
+				</span>
+				<p style="font-size: 1.25em;">
+					The Beginning of The End
+				</p>
+				<p style="text-align: justify;">
+					This story begins on a Beautiful sunny day in Daytona Beach Florida With a man by the name of David Brayner.
+					A 45-year-old Single man who works at the local High school as a science teacher and astrology in the 12-grade level.
+				</p>
+			</div>
+			<div class="col col-1-12">
+				<div style="clear:both;height:60px;width:60px;"></div>
+			</div>
+		</div>
+	</div>
+	<div class="lrweb lines">
+		<div class="gs-960 gs-diet-ex">
+			<div class="col col-6-12">
+				<p style="font-size: 2.5em;">
+					Chapter 1
+				</p>
+				<p style="font-size: 1.25em;">
+					The Beginning of The End
+				</p>
+				<p style="text-align: justify;">
+					This story begins on a Beautiful sunny day in Daytona Beach Florida With a man by the name of David Brayner.
+					A 45-year-old Single man who works at the local High school as a science teacher and astrology in the 12-grade level.
+				</p>
+			</div>
+		</div>
+	</div>
+	<h2>Colors</h2>
+		<p>
+			The Liferay website references color names by <a href="http://www.resene.co.nz/" rel="external">Resene Paints Ltd.</a> as matched by the <a href="http://chir.ag/projects/name-that-color/" rel="external">Name That Color</a> website.
+		</p>
+		<ul class="palette-list clear-after">
+			<li>
+				<div class="palette">
+					<div class="label">
+						Alto
+					</div>
+					<div class="color" style="background: #D9D9D9;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#D9D9D9
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							14-10-11-0
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="palette">
+					<div class="label">
+						Black Squeeze
+					</div>
+					<div class="color" style="background: #EEF4F9;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#EEF4F9
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							5-1-1-0
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="palette">
+					<div class="label">
+						Blue Bayoux
+					</div>
+					<div class="color" style="background: #446D77;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#446D77
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							77-46-43-14
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="palette">
+					<div class="label">
+						Cape Cod
+					</div>
+					<div class="color" style="background: #474A4B;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#474A4B
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							68-59-57-39
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="palette">
+					<div class="label">
+						Cerulean
+					</div>
+					<div class="color" style="background: #00ADEF;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#00ADEF
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							71-16-0-0
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="palette">
+					<div class="label">
+						Gallery
+					</div>
+					<div class="color" style="background: #F0F0F0;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#F0F0F0
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							4-3-3-0
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="palette">
+					<div class="label">
+						Meteor
+					</div>
+					<div class="color" style="background: #DD5F13;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#DD5F13
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							8-75-100-0
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="palette">
+					<div class="label">
+						Mountain Mist
+					</div>
+					<div class="color" style="background: #908E91;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#908E91
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							46-39-37-2
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="palette">
+					<div class="label">
+						Silver Sand
+					</div>
+					<div class="color" style="background: #BABEC2;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#BABEC2
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							27-20-18-0
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="palette">
+					<div class="label">
+						Thunderbird
+					</div>
+					<div class="color" style="background: #CD171D;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#CD171D
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							12-100-100-3
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li>
+				<div class="palette">
+					<div class="label">
+						White
+					</div>
+					<div class="color" style="background: #FFFFFF;"></div>
+					<dl class="hex">
+						<dd class="value">
+							#FFFFFF
+						</dd>
+						<dt class="name">
+							Hex
+						</dt>
+					</dl>
+					<dl class="cmyk">
+						<dd class="value">
+							0-0-0-0
+						</dd>
+						<dt class="name">
+							CMYK
+						</dt>
+					</dl>
+				</div>
+			</li>
+		</ul>
+		<h2>Borders, Corners, and Shadows</h2>
+		<p>
+			The Liferay website uses a consistent set of borders, border radii, and shadows to enhance the branding appeal and continuity of all pages.
+			In most situations, banners and boxes have a css3-based border radius of 10px on all four corners.
+			For browsers not supporting the border radius property, banners and boxes appear square.
+			In many situations, banners and boxes will also have a css3-based box shadow which is aligned 1px beneath the element and with 2px of blurring.
+			Again, for browsers not supporting the box shadow property, banners and boxes appear shadowless.
+		</p>
+		<h2>Components</h2>
+		<article class="ex">
+			<p class="ex-title">
+				Page Heading
+			</p>
+			<div class="ex-content">
+				<dl>
+					<dt>
+						Family
+					</dt>
+					<dd>
+						Arial, Helvetica, sans serif
+					</dd>
+					<dt>
+						Size
+					</dt>
+					<dd>
+						30px
+					</dd>
+					<dt>
+						Line Height
+					</dt>
+					<dd>
+						1.2 (36px)
+					</dd>
+					<dt>
+						Weight
+					</dt>
+					<dd>
+						Bold
+					</dd>
+					<dt>
+						Color
+					</dt>
+					<dd>
+						Blue Bayoux
+					</dd>
+					<dt>
+						Margin Bottom
+					</dt>
+					<dd>
+						12px (0.4em)
+					</dd>
+				</dl>
+				<div class="lrweb">
+					<div class="lrweb-inset">
+						<div class="page-heading">
+							The quick brown fox jumps over the lazy dog
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="ex">
+			<p class="ex-title">
+				Page Heading Description
+			</p>
+			<div class="ex-content">
+				<dl>
+					<dt>
+						Family
+					</dt>
+					<dd>
+						Arial, Helvetica, sans serif
+					</dd>
+					<dt>
+						Size
+					</dt>
+					<dd>
+						16px
+					</dd>
+					<dt>
+						Line Height
+					</dt>
+					<dd>
+						1.25 (20px)
+					</dd>
+					<dt>
+						Weight
+					</dt>
+					<dd>
+						Normal
+					</dd>
+					<dt>
+						Margin Bottom
+					</dt>
+					<dd>
+						18px (1.125em)
+					</dd>
+				</dl>
+				<div class="lrweb">
+					<div class="lrweb-inset">
+						<div class="page-heading-description">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="ex">
+			<p class="ex-title">
+				Page Subheading / Section Heading
+			</p>
+			<div class="ex-content">
+				<dl>
+					<dt>
+						Family
+					</dt>
+					<dd>
+						Arial, Helvetica, sans serif
+					</dd>
+					<dt>
+						Size
+					</dt>
+					<dd>
+						16px
+					</dd>
+					<dt>
+						Line Height
+					</dt>
+					<dd>
+						1.25 (20px)
+					</dd>
+					<dt>
+						Weight
+					</dt>
+					<dd>
+						Bold
+					</dd>
+					<dt>
+						Margin Bottom
+					</dt>
+					<dd>
+						4px (0.25em)
+					</dd>
+				</dl>
+				<div class="lrweb">
+					<div class="lrweb-inset">
+						<div class="page-subheading">
+							The quick brown fox jumps over the lazy dog
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="ex">
+			<p class="ex-title">
+				Section Subheading
+			</p>
+			<div class="ex-content">
+				<dl>
+					<dt>
+						Family
+					</dt>
+					<dd>
+						Arial, Helvetica, sans serif
+					</dd>
+					<dt>
+						Size
+					</dt>
+					<dd>
+						14px
+					</dd>
+					<dt>
+						Line Height
+					</dt>
+					<dd>
+						18px
+					</dd>
+					<dt>
+						Weight
+					</dt>
+					<dd>
+						Bold
+					</dd>
+					<dt>
+						Margin Bottom
+					</dt>
+					<dd>
+						4px
+					</dd>
+				</dl>
+				<div class="lrweb">
+					<div class="lrweb-inset">
+						<div class="section-subheading">
+							The quick brown fox jumps over the lazy dog
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="ex">
+			<p class="ex-title">
+				Caption / small
+			</p>
+			<div class="ex-content">
+				<dl>
+					<dt>
+						Family
+					</dt>
+					<dd>
+						Arial, Helvetica, sans serif
+					</dd>
+					<dt>
+						Size
+					</dt>
+					<dd>
+						9px
+					</dd>
+					<dt>
+						Line Height
+					</dt>
+					<dd>
+						1.333 (12px)
+					</dd>
+					<dt>
+						Weight
+					</dt>
+					<dd>
+						Normal
+					</dd>
+					<dt>
+						Color
+					</dt>
+					<dd>
+						Mountain Mist
+					</dd>
+					<dt>
+						Vertical Margin
+					</dt>
+					<dd>
+						9px (1em)
+					</dd>
+				</dl>
+				<div class="lrweb">
+					<div class="lrweb-inset">
+						<div class="caption">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+							Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="ex">
+			<p class="ex-title">
+				Paragraph
+			</p>
+			<div class="ex-content">
+				<dl>
+					<dt>
+						Family
+					</dt>
+					<dd>
+						Arial, Helvetica, sans serif
+					</dd>
+					<dt>
+						Size
+					</dt>
+					<dd>
+						12px
+					</dd>
+					<dt>
+						Line Height
+					</dt>
+					<dd>
+						1.5 (18px)
+					</dd>
+					<dt>
+						Weight
+					</dt>
+					<dd>
+						Normal
+					</dd>
+					<dt>
+						Color
+					</dt>
+					<dd>
+						Cape Cod
+					</dd>
+					<dt>
+						Vertical Margin
+					</dt>
+					<dd>
+						9px (0.75em)
+					</dd>
+				</dl>
+				<div class="lrweb">
+					<div class="lrweb-inset">
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+						</p>
+						<p>
+							Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+						</p>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="ex">
+			<p class="ex-title">
+				Fine Print
+			</p>
+			<div class="ex-content">
+				<dl>
+					<dt>
+						Family
+					</dt>
+					<dd>
+						Arial, Helvetica, sans serif
+					</dd>
+					<dt>
+						Size
+					</dt>
+					<dd>
+						9px
+					</dd>
+					<dt>
+						Line Height
+					</dt>
+					<dd>
+						1.5 (18px)
+					</dd>
+				</dl>
+				<div class="lrweb">
+					<div class="lrweb-inset">
+						<div class="fine-print">
+							<span>
+								Requirements
+							</span><br/>
+							<span>
+								All Trainings
+							</span><br/>
+							<span>
+								Dual Core processor, 2GB RAM, wireless card<br />Windows XP, Mac OSX *, or Linux *
+							</span><br/>
+							<span>
+								* Note: if you use Mac OSX or Linux, you must be prepared to support yourself if any operating system issues arise, as the trainer is not guaranteed to be familiar with these systems.
+							</span><br/>
+							<span>
+								Developer Training
+							</span><br/>
+							<span>
+								Basic knowledge of Java and Servlets is required.
+							</span><br/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<h2>
+			Common Elements
+		</h2>
+		<article class="ex">
+			<p class="ex-title">
+				Button
+			</p>
+			<div class="ex-content">
+				<dl>
+					<dt>
+						Family
+					</dt>
+					<dd>
+						Arial, Helvetica, sans serif
+					</dd>
+					<dt>
+						Size
+					</dt>
+					<dd>
+						12px
+					</dd>
+					<dt>
+						Line Height
+					</dt>
+					<dd>
+						1.5 (18px)
+					</dd>
+					<dt>
+						Weight
+					</dt>
+					<dd>
+						Bold
+					</dd>
+					<dt>
+						Color
+					</dt>
+					<dd>
+						White
+					</dd>
+					<dt>
+						Margin Bottom
+					</dt>
+					<dd>
+						3px
+					</dd>
+					<dt class="newline">
+						Background Color
+					</dt>
+					<dd>
+						Cerulean
+					</dd>
+					<dt>
+						Border Radius
+					</dt>
+					<dd>
+						3px
+					</dd>
+					<dt>
+						Padding
+					</dt>
+					<dd>
+						3px, 20px
+					</dd>
+					<dt>
+						Box Shadow
+					</dt>
+					<dd>
+						0 1px 2px rgba(0, 0, 0, 0.7)
+					</dd>
+					<dt>
+						Cursor
+					</dt>
+					<dd>
+						Pointer
+					</dd>
+					<dt class="newline">
+						Highlighted Background Color
+					</dt>
+					<dd>
+						Meteor
+					</dd>
+				</dl>
+				<div class="lrweb">
+					<a href="javascript:window.btn;" class="btn">The quick brown fox jumps over the lazy dog</a>
+				</div>
+			</div>
+		</article>
+		<article class="ex">
+			<p class="ex-title">
+				Tab Box
+			</p>
+			<div class="ex-content">
+				<dl>
+					<dt>
+						Margin Bottom
+					</dt>
+					<dd>
+						9px
+					</dd>
+					<dt class="newline">
+						Background Color
+					</dt>
+					<dd>
+						Gallery
+					</dd>
+					<dt class="newline">
+						Background Gradient
+					</dt>
+					<dd>
+						Alto to Gallery
+					</dd>
+					<dt>
+						Border Radius
+					</dt>
+					<dd>
+						5px
+					</dd>
+					<dt>
+						Padding
+					</dt>
+					<dd>
+						12px, 20px
+					</dd>
+					<dt>
+						Box Shadow
+					</dt>
+					<dd>
+						0 1px 2px rgba(0, 0, 0, 0.7)
+					</dd>
+				</dl>
+				<span>
+					Tab Content
+				</span>
+				<div class="lrweb">
+					<div class="clear-after">
+						<div class="tab">
+							<div class="tab-content">
+								The quick brown fox jumps over the lazy dog
+							</div>
+						</div>
+					</div>
+				</div>
+				<span>
+					Tab Navigation
+				</span>
+				<div class="lrweb">
+					<div class="clear-after">
+						<nav class="tab tab-nav">
+							<ul>
+								<li class="first">
+									<a href="#">The</a>
+								</li>
+								<li>
+									<a href="#">Quick</a>
+								</li>
+								<li class="selected">
+									<a href="#">Brown</a>
+								</li>
+								<li class="last">
+									<a href="#">Fox</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="ex">
+			<p class="ex-title">
+				Tables
+			</p>
+			<div class="ex-content">
+				<div class="lrweb">
+					<table class="report">
+						<!-- col supports borders, backgrounds, width and visibility -->
+						<col style="width: 40%;" />
+						<col style="width: 18%;" />
+						<col style="width: 18%;" />
+						<col style="width: 24%;" />
+						<thead>
+							<tr>
+								<th class="first">
+									Course
+								</th>
+								<th>
+									Location
+								</th>
+								<th>
+									Language
+								</th>
+								<th class="last">
+									Dates
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="first">
+									Mousekeeter Training
+								</td>
+								<td>
+									Disneyland, CA
+								</td>
+								<td>
+									English
+								</td>
+								<td class="last">
+									Jan 01, 2011 - Dec 31, 2011
+								</td>
+							</tr>
+							<tr>
+								<td class="first">
+									Time Travel Training
+								</td>
+								<td>
+									Walnut, CA
+								</td>
+								<td>
+									English
+								</td>
+								<td class="last">
+									July 04, 2011 - Nov 05, 1885
+								</td>
+							</tr>
+							<tr class="last">
+								<td class="first">
+									Potty Training
+								</td>
+								<td>
+									Walnut, CA
+								</td>
+								<td>
+									&mdash;
+								</td>
+								<td class="last">
+									Sept 20, 1982 - Sept 09, 1984
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</article>
+		<article class="ex">
+			<p class="ex-title">
+				Bumper Box
+			</p>
+			<div class="ex-content">
+				<dl>
+					<dt>
+						Margin Bottom
+					</dt>
+					<dd>
+						18px
+					</dd>
+					<dt>
+						Background Color
+					</dt>
+					<dd>
+						White
+					</dd>
+					<dt>
+						Border Width
+					</dt>
+					<dd>
+						1px
+					</dd>
+					<dt>
+						Border Color
+					</dt>
+					<dd>
+						Silver Sand
+					</dd>
+					<dt>
+						Border Radius
+					</dt>
+					<dd>
+						5px
+					</dd>
+				</dl>
+				<div class="lrweb">
+					<div class="callout">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</div>
+			</div>
+		</article>
+</section>
