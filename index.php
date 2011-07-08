@@ -32,6 +32,7 @@ include_once('layout/header.php');
 				<?php
 				//include_once('sections/general.html');
 				include_once('sections/liferay.html');
+				include_once('sections/yoshi.html');
 				//include_once('sections/markup.html');
 				//include_once('sections/css.html');
 				//include_once('sections/javascript.html');
