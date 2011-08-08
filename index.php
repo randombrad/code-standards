@@ -35,6 +35,7 @@ include_once('layout/header.php');
 				//include_once('sections/markup.html');
 				include_once('sections/css.html');
 				include_once('sections/velocity.html');
+				include_once('sections/naming.html');
 				//include_once('sections/javascript.html');
 				//include_once('sections/performance.html');
 				//include_once('sections/browsers.html');

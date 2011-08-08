@@ -528,6 +528,10 @@ h6, figure.preCode {
 	padding: 5px 10px;
 }
 
+h6 {
+	margin: 5px 0;
+}
+
 figure.preCode {
 	border: none;
 	display: block;
