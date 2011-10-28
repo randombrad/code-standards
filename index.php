@@ -57,7 +57,8 @@ include_once('layout/header.php');
 
 		<footer role="contentinfo">
 			<p>
-				<span class="float_left"><?php print date("Y"); ?> Liferay, Inc. All rights reserved.</span>
+				<span class="float_left"><?php print date("Y"); ?> Isobar North America, Inc. All rights reserved.</span>
+				<span class="float_right">All content licensed under Creative Commons Attribution 3.0 Unported License</span>
 			</p>
 		</footer>
 
